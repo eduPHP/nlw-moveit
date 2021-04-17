@@ -1,9 +1,9 @@
-import styles from '../styles/components/LevelUpModal.module.css';
-import { useContext } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
+import styles from '../styles/components/LevelUpModal.module.css'
+import { ReactElement, useContext } from 'react'
+import { ChallengesContext } from '../contexts/ChallengesContext'
 
-export default function LevelUpModal() {
-  const { level, closeLevelUpModal } = useContext(ChallengesContext);
+export default function LevelUpModal(): ReactElement {
+  const { level, closeLevelUpModal } = useContext(ChallengesContext)
 
   return (
     <div className={styles.overlay}>
@@ -13,7 +13,7 @@ export default function LevelUpModal() {
         <p>Você subiu de nível!</p>
 
         <button type="button" onClick={closeLevelUpModal}>
-          <img src="/icons/close.svg" alt="Fechar"/>
+          <img src="/icons/close.svg" alt="Fechar" />
         </button>
       </div>
     </div>
